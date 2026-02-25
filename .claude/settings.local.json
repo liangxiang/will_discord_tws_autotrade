@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python discord_receiver.py)",
+      "Bash(curl -X POST http://localhost:8888/discord-message -H \"Content-Type: application/json\" -d \"{\"\"id\"\":\"\"test123\"\",\"\"timestamp\"\":\"\"2024-12-25T14:30:25Z\"\",\"\"author\"\":\"\"TestUser\"\",\"\"content\"\":\"\"Test message from curl\"\",\"\"channel_url\"\":\"\"test\"\"}\")",
+      "Bash(curl \"http://localhost:8888/discord-message-jsonp?callback=testCallback&id=test123&timestamp=2024-12-25T14:30:25Z&author=TestUser&content=Test%20JSONP%20message&channel_url=test\")",
+      "Bash(pip install websockets)",
+      "Bash(python discord_websocket_server.py)",
+      "Bash(pip install pyperclip psutil)",
+      "Bash(python discord_full_auto_monitor.py)",
+      "Bash(python discord_webhook_server.py)",
+      "Bash(curl -X POST http://localhost:8888/webhook -H \"Content-Type: application/json\" -d \"{\"\"id\"\":\"\"test-123\"\",\"\"timestamp\"\":\"\"2024-12-25T14:30:25Z\"\",\"\"author\"\":\"\"TestUser\"\",\"\"content\"\":\"\"测试消息内容\"\",\"\"channel_url\"\":\"\"https://discord.com/test\"\"}\")",
+      "Bash(curl -X POST http://localhost:8888/webhook -H \"Content-Type: application/json\" -d \"{\"\"author\"\":\"\"TestUser\"\",\"\"content\"\":\"\"Hello World\"\"}\")",
+      "Bash(curl -X POST http://127.0.0.1:8888/webhook -H \"Content-Type: application/json\" -d \"{\"\"author\"\":\"\"TestUser\"\",\"\"content\"\":\"\"测试127.0.0.1连接\"\"}\")",
+      "Bash(curl -X POST http://127.0.0.1:8888/webhook -H \"Content-Type: application/json\" -d \"{\"\"author\"\":\"\"TestUser\"\",\"\"content\"\":\"\"Hello\"\"}\")",
+      "Bash(del discord_receiver.py discord_websocket_server.py discord_auto_monitor.py discord_full_auto_monitor.py discord_localstorage_reader.py discord_simple_monitor.py discord_tampermonkey_reader.py dom-inspector.user.js export_discord_data.js websocket_test.html start.bat FINAL_SOLUTION.md)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

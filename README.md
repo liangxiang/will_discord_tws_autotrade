@@ -1,104 +1,118 @@
-# Discord Channel Monitor - 完全自动化系统
+# Discord频道消息监控系统
 
-🎯 **零手动操作的Discord消息监控系统**
+🎯 **实时抓取Discord频道消息的完整解决方案**
 
-绕过Discord严格的CSP限制，实现Tampermonkey脚本自动抓取消息并传输给Python程序的完全自动化解决方案。
+绕过Discord严格的CSP限制，实现Tampermonkey脚本自动抓取消息并实时传输到Python程序。
 
-## 🚀 系统架构 (完全自动化)
+## 🚀 系统特点
 
-```
-Discord频道 → Tampermonkey脚本 → 自动文件下载/剪贴板 → Python自动检测 → 终端显示
-```
+- ✅ **完全自动化** - 无需手动操作
+- ✅ **实时传输** - 消息即时显示
+- ✅ **绕过CSP限制** - 使用127.0.0.1地址
+- ✅ **稳定可靠** - HTTP POST直接传输
+- ✅ **简单易用** - 仅需3个文件
 
-**特点:** 无需任何手动导出操作！
+## 📁 文件说明
 
-## 安装步骤
+1. **`discord-channel-monitor.user.js`** - Tampermonkey用户脚本
+   - 监控Discord频道新消息
+   - 自动POST数据到Python服务器
+   
+2. **`discord_webhook_server.py`** - Python HTTP服务器
+   - 接收Discord消息数据
+   - 格式化显示在终端
 
-### 1. 安装Python程序
+3. **`README.md`** - 本说明文档
+
+## 🛠️ 安装使用
+
+### 步骤1: 安装Tampermonkey脚本
+
+1. 安装Tampermonkey浏览器扩展
+2. 打开Tampermonkey控制面板
+3. 点击"创建新脚本"
+4. 复制粘贴 `discord-channel-monitor.user.js` 的内容
+5. 保存脚本 (Ctrl+S)
+
+### 步骤2: 启动Python服务器
+
 ```bash
-# 直接运行Python接收器
-python discord_receiver.py
+python discord_webhook_server.py
 ```
 
-### 2. 安装Tampermonkey脚本
-1. **安装Tampermonkey扩展**
-   - Chrome: 在Chrome Web Store搜索"Tampermonkey"并安装
-   - Firefox: 在Firefox Add-ons搜索"Tampermonkey"并安装
-
-2. **安装脚本**
-   - 打开Tampermonkey控制面板
-   - 点击"创建新脚本"
-   - 删除默认内容，复制粘贴`discord-channel-monitor.user.js`的所有内容
-   - 保存脚本 (Ctrl+S)
-
-## 🎯 使用方法 (完全自动化)
-
-### ⚡ 全自动方案 (推荐)
-
-**步骤1: 启动Python自动监控器**
-```bash
-python discord_full_auto_monitor.py
+服务器启动后会显示：
+```
+Discord Webhook服务器启动!
+监听地址: http://127.0.0.1:8888/webhook
+等待Tampermonkey脚本连接...
 ```
 
-**步骤2: 启动Tampermonkey脚本**
-1. 打开Discord频道: `https://discord.com/channels/1121213949736656966/1375495804109979698`
-2. 点击右上角"Start Monitoring"
+### 步骤3: 开始监控
 
-**就这样！完全自动化！** 🎉
+1. 打开目标Discord频道 (例如: `https://discord.com/channels/xxx/xxx`)
+2. 等待3秒让脚本加载
+3. 点击页面右上角的"Start Monitoring"按钮
+4. 控制台显示连接成功信息
 
-### 🔄 自动化工作流程
+## 📊 效果展示
 
-1. **Tampermonkey自动执行:**
-   - ✅ 抓取Discord新消息
-   - ✅ 自动下载JSON文件到Downloads文件夹
-   - ✅ 自动复制消息到剪贴板
-   - ✅ 发送系统通知
-   - ✅ 修改页面标题
+**Python终端实时输出：**
+```
+127.0.0.1 - - [25/Feb/2026 12:30:56] "POST /webhook HTTP/1.1" 200
+恭喜!成功接收到Discord数据:
+时间: 2026-02-25 12:30:56
+用户: Discord用户名
+内容: 消息内容
+频道: https://discord.com/channels/xxx/xxx
+--------------------------------------------------------------------------------
+```
 
-2. **Python自动监控:**
-   - ✅ 监控Downloads文件夹新文件
-   - ✅ 监控剪贴板变化
-   - ✅ 自动清理临时文件
-   - ✅ 实时显示新消息
+## 🔧 技术原理
 
-### 🛡️ CSP限制解决方案
+### 核心突破
+Discord的CSP策略阻止大部分外部连接，但允许 `http://127.0.0.1:*`
 
-Discord的严格CSP策略阻止：
-- ❌ HTTP请求 (fetch/XMLHttpRequest)  
-- ❌ WebSocket连接
-- ❌ 动态script标签
+### 工作流程
+1. **Tampermonkey脚本** 监控DOM变化，检测新消息
+2. **自动抓取** 消息ID、时间戳、用户名、内容
+3. **HTTP POST** 发送JSON数据到 `http://127.0.0.1:8888/webhook`
+4. **Python服务器** 接收数据并格式化显示
 
-我们的创新解决方案：
-- ✅ GM_download API自动下载文件
-- ✅ GM_setClipboard API自动复制数据
-- ✅ GM_notification API系统通知
-- ✅ Python多源自动检测
+### CSP绕过策略
+- ❌ `localhost` 被阻止
+- ✅ `127.0.0.1` 被允许
+- ❌ WebSocket连接被阻止  
+- ✅ HTTP POST请求成功
 
-## 功能特性
+## 🛡️ 安全说明
 
-- ✅ 实时监控Discord频道新消息
-- ✅ 消息数据发送到本地Python程序
-- ✅ 终端实时显示消息内容、作者和时间
-- ✅ 自动滚动到最新消息
-- ✅ 可视化控制面板
-- ✅ CORS支持，跨域请求处理
+- 本工具仅用于监控**有权限访问**的Discord频道
+- 请遵守Discord服务条款和相关法律法规
+- 数据仅在本地处理，不上传到任何外部服务器
 
-## 文件说明
+## 🐛 故障排除
 
-- `discord-channel-monitor.user.js`: Tampermonkey用户脚本
-- `discord_receiver.py`: Python HTTP服务器，接收并处理Discord消息
-- `README.md`: 使用说明文档
+**问题1: 脚本无法连接服务器**
+- 确保Python服务器已启动
+- 检查防火墙是否阻止8888端口
+- 确认使用127.0.0.1而不是localhost
 
-## 技术细节
+**问题2: 无法检测到新消息**
+- 刷新Discord页面重新加载脚本
+- 检查浏览器控制台是否有错误信息
+- 确认频道有新消息产生
 
-- **通信端口**: localhost:8888
-- **数据格式**: JSON
-- **检查频率**: 每2秒检查一次新消息
-- **超时处理**: 包含错误处理和重连机制
+**问题3: 消息格式异常**
+- 检查Discord页面DOM结构是否变化
+- 查看控制台调试信息定位问题
 
-## 注意事项
+## 📝 更新日志
 
-- 必须先启动Python程序，再启动Tampermonkey脚本
-- 需要保持Discord标签页打开
-- Python程序和浏览器需要在同一台机器上运行
-- 按Ctrl+C可以停止Python程序
+- **v1.0** - 初始版本，基本消息监控功能
+- **v2.0** - 修复CSP限制，使用127.0.0.1地址
+- **v3.0** - 优化消息解析，提高稳定性
+
+---
+
+**开发完成时间:** 2026年2月  
+**状态:** ✅ 已测试通过，正常工作
