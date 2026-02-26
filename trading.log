@@ -1,0 +1,512 @@
+2026-02-25 15:46:28,411 - INFO - sent startApi
+2026-02-25 15:46:28,412 - INFO - REQUEST startApi {}
+2026-02-25 15:46:28,412 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:46:28,412 - INFO - TWS连接已确认
+2026-02-25 15:46:28,412 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:46:28,414 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:46:28,414 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:46:28,625 - INFO - disconnecting
+2026-02-25 15:46:28,625 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:46:39,353 - INFO - sent startApi
+2026-02-25 15:46:39,353 - INFO - REQUEST startApi {}
+2026-02-25 15:46:39,353 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:46:39,354 - INFO - TWS连接已确认
+2026-02-25 15:46:39,354 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:46:39,356 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:46:39,356 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:46:39,356 - INFO - 下一个订单ID: 1
+2026-02-25 15:46:39,356 - INFO - ANSWER managedAccounts {'accountsList': 'DUM238060'}
+2026-02-25 15:46:39,356 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfarm.nj'}
+2026-02-25 15:46:39,357 - ERROR - ERROR -1 2104 市场数据场连接正常:usfarm.nj
+2026-02-25 15:46:39,357 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:hfarm'}
+2026-02-25 15:46:39,357 - ERROR - ERROR -1 2104 市场数据场连接正常:hfarm
+2026-02-25 15:46:39,357 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:jfarm'}
+2026-02-25 15:46:39,357 - ERROR - ERROR -1 2104 市场数据场连接正常:jfarm
+2026-02-25 15:46:39,357 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfuture'}
+2026-02-25 15:46:39,357 - ERROR - ERROR -1 2104 市场数据场连接正常:usfuture
+2026-02-25 15:46:39,357 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usopt.nj'}
+2026-02-25 15:46:39,358 - ERROR - ERROR -1 2104 市场数据场连接正常:usopt.nj
+2026-02-25 15:46:39,358 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:cashfarm'}
+2026-02-25 15:46:39,358 - ERROR - ERROR -1 2104 市场数据场连接正常:cashfarm
+2026-02-25 15:46:39,358 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:eufarmnj'}
+2026-02-25 15:46:39,358 - ERROR - ERROR -1 2104 市场数据场连接正常:eufarmnj
+2026-02-25 15:46:39,358 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfarm'}
+2026-02-25 15:46:39,358 - ERROR - ERROR -1 2104 市场数据场连接正常:usfarm
+2026-02-25 15:46:39,358 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:euhmds'}
+2026-02-25 15:46:39,359 - ERROR - ERROR -1 2106 历史市场数据场连接正常:euhmds
+2026-02-25 15:46:39,359 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:apachmds'}
+2026-02-25 15:46:39,359 - ERROR - ERROR -1 2106 历史市场数据场连接正常:apachmds
+2026-02-25 15:46:39,359 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:fundfarm'}
+2026-02-25 15:46:39,359 - ERROR - ERROR -1 2106 历史市场数据场连接正常:fundfarm
+2026-02-25 15:46:39,359 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:ushmds'}
+2026-02-25 15:46:39,359 - ERROR - ERROR -1 2106 历史市场数据场连接正常:ushmds
+2026-02-25 15:46:39,359 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2158, 'errorString': 'Sec-def数据场连接正常:secdefhk'}
+2026-02-25 15:46:39,359 - ERROR - ERROR -1 2158 Sec-def数据场连接正常:secdefhk
+2026-02-25 15:46:39,359 - INFO - 下一个订单ID: 1
+2026-02-25 15:47:38,843 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:40,938 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:41,547 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:42,165 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:42,368 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:42,582 - INFO - detected KeyboardInterrupt, SystemExit
+2026-02-25 15:47:42,582 - INFO - disconnecting
+2026-02-25 15:47:42,582 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:48:53,615 - INFO - sent startApi
+2026-02-25 15:48:53,615 - INFO - REQUEST startApi {}
+2026-02-25 15:48:53,615 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:48:53,616 - INFO - TWS连接已确认
+2026-02-25 15:48:53,616 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:48:53,617 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:48:53,617 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:48:53,617 - INFO - 下一个订单ID: 1
+2026-02-25 15:48:53,617 - INFO - ANSWER managedAccounts {'accountsList': 'DUM238060'}
+2026-02-25 15:48:53,617 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfarm.nj'}
+2026-02-25 15:48:53,617 - ERROR - ERROR -1 2104 市场数据场连接正常:usfarm.nj
+2026-02-25 15:48:53,617 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:hfarm'}
+2026-02-25 15:48:53,617 - ERROR - ERROR -1 2104 市场数据场连接正常:hfarm
+2026-02-25 15:48:53,617 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:jfarm'}
+2026-02-25 15:48:53,617 - ERROR - ERROR -1 2104 市场数据场连接正常:jfarm
+2026-02-25 15:48:53,617 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfuture'}
+2026-02-25 15:48:53,617 - ERROR - ERROR -1 2104 市场数据场连接正常:usfuture
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usopt.nj'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2104 市场数据场连接正常:usopt.nj
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:cashfarm'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2104 市场数据场连接正常:cashfarm
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:eufarmnj'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2104 市场数据场连接正常:eufarmnj
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2104, 'errorString': '市场数据场连接正常:usfarm'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2104 市场数据场连接正常:usfarm
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:euhmds'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2106 历史市场数据场连接正常:euhmds
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:apachmds'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2106 历史市场数据场连接正常:apachmds
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:fundfarm'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2106 历史市场数据场连接正常:fundfarm
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2106, 'errorString': '历史市场数据场连接正常:ushmds'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2106 历史市场数据场连接正常:ushmds
+2026-02-25 15:48:53,618 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2158, 'errorString': 'Sec-def数据场连接正常:secdefhk'}
+2026-02-25 15:48:53,618 - ERROR - ERROR -1 2158 Sec-def数据场连接正常:secdefhk
+2026-02-25 15:48:53,618 - INFO - 下一个订单ID: 1
+2026-02-25 15:49:07,567 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:jfarm'}
+2026-02-25 15:49:07,567 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:jfarm
+2026-02-25 15:49:07,567 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:jfarm'}
+2026-02-25 15:49:07,567 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:jfarm
+2026-02-25 15:49:07,568 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:usfuture'}
+2026-02-25 15:49:07,568 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:usfuture
+2026-02-25 15:49:07,568 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:usfuture'}
+2026-02-25 15:49:07,568 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:usfuture
+2026-02-25 15:49:07,568 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:eufarmnj'}
+2026-02-25 15:49:07,568 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:eufarmnj
+2026-02-25 15:49:07,568 - INFO - ANSWER error {'reqId': -1, 'errorCode': 2108, 'errorString': '市场数据场连接暂未激活，但可按需提供。:eufarmnj'}
+2026-02-25 15:49:07,568 - ERROR - ERROR -1 2108 市场数据场连接暂未激活，但可按需提供。:eufarmnj
+2026-02-25 15:50:46,057 - INFO - sent startApi
+2026-02-25 15:50:46,058 - INFO - REQUEST startApi {}
+2026-02-25 15:50:46,058 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:50:46,058 - INFO - TWS连接已确认
+2026-02-25 15:50:46,058 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:50:46,058 - INFO - TWS连接成功!
+2026-02-25 15:50:46,058 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:50:46,058 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:50:46,058 - INFO - disconnecting
+2026-02-25 15:50:46,059 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:51:56,249 - INFO - sent startApi
+2026-02-25 15:51:56,249 - INFO - REQUEST startApi {}
+2026-02-25 15:51:56,249 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:51:56,249 - INFO - TWS连接已确认
+2026-02-25 15:51:56,249 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:51:56,249 - INFO - TWS连接成功!
+2026-02-25 15:51:56,249 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:51:56,249 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:51:56,250 - INFO - disconnecting
+2026-02-25 15:51:56,250 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:52:18,793 - INFO - sent startApi
+2026-02-25 15:52:18,793 - INFO - REQUEST startApi {}
+2026-02-25 15:52:18,793 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:52:18,793 - INFO - TWS连接已确认
+2026-02-25 15:52:18,793 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:52:18,793 - INFO - TWS连接成功!
+2026-02-25 15:52:18,793 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:52:18,793 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:52:18,997 - INFO - disconnecting
+2026-02-25 15:52:18,997 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:52:38,370 - INFO - sent startApi
+2026-02-25 15:52:38,371 - INFO - REQUEST startApi {}
+2026-02-25 15:52:38,371 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:52:38,371 - INFO - TWS连接已确认
+2026-02-25 15:52:38,371 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:52:38,371 - INFO - TWS连接成功!
+2026-02-25 15:52:38,371 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:52:38,371 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:52:38,371 - INFO - disconnecting
+2026-02-25 15:52:38,372 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:52:51,689 - INFO - sent startApi
+2026-02-25 15:52:51,689 - INFO - REQUEST startApi {}
+2026-02-25 15:52:51,689 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:52:51,690 - INFO - TWS连接已确认
+2026-02-25 15:52:51,690 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:52:51,690 - INFO - TWS连接成功!
+2026-02-25 15:52:51,690 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:52:51,690 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:52:51,902 - INFO - disconnecting
+2026-02-25 15:52:51,902 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:54:02,826 - INFO - sent startApi
+2026-02-25 15:54:02,826 - INFO - REQUEST startApi {}
+2026-02-25 15:54:02,827 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:54:02,827 - INFO - TWS连接已确认
+2026-02-25 15:54:02,827 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:54:02,827 - INFO - TWS连接成功!
+2026-02-25 15:54:02,827 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:54:02,827 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:54:02,827 - INFO - disconnecting
+2026-02-25 15:54:02,827 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:54:49,885 - INFO - sent startApi
+2026-02-25 15:54:49,885 - INFO - REQUEST startApi {}
+2026-02-25 15:54:49,885 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:54:49,885 - INFO - TWS连接已确认
+2026-02-25 15:54:49,885 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:54:49,885 - INFO - TWS连接成功!
+2026-02-25 15:54:49,885 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:54:49,885 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:54:50,086 - INFO - disconnecting
+2026-02-25 15:54:50,087 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:58:01,473 - INFO - sent startApi
+2026-02-25 15:58:01,473 - INFO - REQUEST startApi {}
+2026-02-25 15:58:01,473 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:58:01,473 - INFO - TWS连接已确认
+2026-02-25 15:58:01,473 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:58:01,473 - INFO - TWS连接成功!
+2026-02-25 15:58:01,473 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:58:01,474 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:58:01,475 - INFO - ANSWER error {'reqId': -1, 'errorCode': 326, 'errorString': '客户号码已被使用，无法连接。请用未被使用的客户号码重试。'}
+2026-02-25 15:58:01,475 - ERROR - ERROR -1 326 客户号码已被使用，无法连接。请用未被使用的客户号码重试。
+2026-02-25 15:58:01,475 - INFO - disconnecting
+2026-02-25 15:58:01,475 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:58:10,828 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 15:59:20,957 - INFO - sent startApi
+2026-02-25 15:59:20,957 - INFO - REQUEST startApi {}
+2026-02-25 15:59:20,957 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 15:59:20,957 - INFO - TWS连接已确认
+2026-02-25 15:59:20,958 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 15:59:20,958 - INFO - TWS连接成功!
+2026-02-25 15:59:20,958 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 15:59:20,958 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 15:59:20,959 - INFO - disconnecting
+2026-02-25 15:59:20,959 - INFO - ANSWER connectionClosed {}
+2026-02-25 15:59:36,829 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:02:06,829 - INFO - [消息] 收到消息: Unknown: dd...
+2026-02-25 16:03:32,202 - INFO - sent startApi
+2026-02-25 16:03:32,202 - INFO - REQUEST startApi {}
+2026-02-25 16:03:32,202 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:03:32,202 - INFO - TWS连接已确认
+2026-02-25 16:03:32,202 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:03:32,202 - INFO - TWS连接成功!
+2026-02-25 16:03:32,202 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:03:32,202 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:03:55,819 - INFO - sent startApi
+2026-02-25 16:03:55,819 - INFO - REQUEST startApi {}
+2026-02-25 16:03:55,819 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:03:55,819 - INFO - TWS连接已确认
+2026-02-25 16:03:55,820 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:03:55,820 - INFO - TWS连接成功!
+2026-02-25 16:03:55,820 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:03:55,820 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:04:59,168 - INFO - sent startApi
+2026-02-25 16:04:59,168 - INFO - REQUEST startApi {}
+2026-02-25 16:04:59,168 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:04:59,168 - INFO - TWS连接已确认
+2026-02-25 16:04:59,169 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:04:59,169 - INFO - TWS连接成功!
+2026-02-25 16:04:59,169 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:04:59,169 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:06:10,830 - INFO - [消息] 收到消息: grace: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:06:10,830 - INFO - [消息] 收到消息: Unknown: asdfsd]...
+2026-02-25 16:09:47,248 - INFO - sent startApi
+2026-02-25 16:09:47,248 - INFO - REQUEST startApi {}
+2026-02-25 16:09:47,248 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:09:47,249 - INFO - TWS连接已确认
+2026-02-25 16:09:47,249 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:09:47,249 - INFO - TWS连接成功!
+2026-02-25 16:09:47,249 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:09:47,249 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:10:04,821 - INFO - sent startApi
+2026-02-25 16:10:04,821 - INFO - REQUEST startApi {}
+2026-02-25 16:10:04,821 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:10:04,821 - INFO - TWS连接已确认
+2026-02-25 16:10:04,822 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:10:04,822 - INFO - TWS连接成功!
+2026-02-25 16:10:04,822 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:10:04,822 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:10:38,734 - INFO - sent startApi
+2026-02-25 16:10:38,734 - INFO - REQUEST startApi {}
+2026-02-25 16:10:38,734 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:10:38,734 - INFO - TWS连接已确认
+2026-02-25 16:10:38,734 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:10:38,734 - INFO - TWS连接成功!
+2026-02-25 16:10:38,734 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:10:38,734 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:14:27,448 - INFO - sent startApi
+2026-02-25 16:14:27,449 - INFO - REQUEST startApi {}
+2026-02-25 16:14:27,449 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:14:27,449 - INFO - TWS连接已确认
+2026-02-25 16:14:27,449 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:14:27,449 - INFO - TWS连接成功!
+2026-02-25 16:14:27,449 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:14:27,449 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:14:54,851 - INFO - [消息] 收到消息: TestUser: Hello...
+2026-02-25 16:15:10,705 - INFO - sent startApi
+2026-02-25 16:15:10,705 - INFO - REQUEST startApi {}
+2026-02-25 16:15:10,706 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:15:10,706 - INFO - TWS连接已确认
+2026-02-25 16:15:10,706 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:15:10,706 - INFO - TWS连接成功!
+2026-02-25 16:15:10,706 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:15:10,706 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:15:20,829 - INFO - [消息] 收到消息: Unknown: bb...
+2026-02-25 16:15:38,829 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:16:11,968 - INFO - disconnecting
+2026-02-25 16:16:11,968 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:16:13,899 - INFO - sent startApi
+2026-02-25 16:16:13,899 - INFO - REQUEST startApi {}
+2026-02-25 16:16:13,899 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:16:13,899 - INFO - TWS连接已确认
+2026-02-25 16:16:13,899 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:16:13,899 - INFO - TWS连接成功!
+2026-02-25 16:16:13,901 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:16:13,901 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:16:20,845 - INFO - [消息] 收到消息: Unknown: bb...
+2026-02-25 16:16:48,831 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:18:59,355 - INFO - disconnecting
+2026-02-25 16:18:59,355 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:19:58,841 - INFO - sent startApi
+2026-02-25 16:19:58,841 - INFO - REQUEST startApi {}
+2026-02-25 16:19:58,841 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:19:58,841 - INFO - TWS连接已确认
+2026-02-25 16:19:58,841 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:19:58,841 - INFO - TWS连接成功!
+2026-02-25 16:19:58,841 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:19:58,841 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:20:41,293 - INFO - sent startApi
+2026-02-25 16:20:41,293 - INFO - REQUEST startApi {}
+2026-02-25 16:20:41,293 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:20:41,293 - INFO - TWS连接已确认
+2026-02-25 16:20:41,294 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:20:41,294 - INFO - TWS连接成功!
+2026-02-25 16:20:41,294 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:20:41,294 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:20:49,003 - INFO - disconnecting
+2026-02-25 16:20:49,003 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:21:06,391 - INFO - sent startApi
+2026-02-25 16:21:06,391 - INFO - REQUEST startApi {}
+2026-02-25 16:21:06,391 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:21:06,391 - INFO - TWS连接已确认
+2026-02-25 16:21:06,392 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:21:06,392 - INFO - TWS连接成功!
+2026-02-25 16:21:06,392 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:21:06,392 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:21:10,830 - INFO - [消息] 收到消息: grace: bb...
+2026-02-25 16:21:16,829 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:22:02,305 - INFO - disconnecting
+2026-02-25 16:22:02,305 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:22:05,121 - INFO - sent startApi
+2026-02-25 16:22:05,121 - INFO - REQUEST startApi {}
+2026-02-25 16:22:05,121 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:22:05,121 - INFO - TWS连接已确认
+2026-02-25 16:22:05,122 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:22:05,122 - INFO - TWS连接成功!
+2026-02-25 16:22:05,122 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:22:05,122 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:22:40,079 - INFO - sent startApi
+2026-02-25 16:22:40,079 - INFO - REQUEST startApi {}
+2026-02-25 16:22:40,079 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:22:40,079 - INFO - TWS连接已确认
+2026-02-25 16:22:40,079 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:22:40,080 - INFO - TWS连接成功!
+2026-02-25 16:22:40,080 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:22:40,080 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:22:42,829 - INFO - [消息] 收到消息: Unknown: bb...
+2026-02-25 16:22:48,830 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:23:43,004 - INFO - disconnecting
+2026-02-25 16:23:43,004 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:24:06,389 - INFO - sent startApi
+2026-02-25 16:24:06,389 - INFO - REQUEST startApi {}
+2026-02-25 16:24:06,389 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:24:06,389 - INFO - TWS连接已确认
+2026-02-25 16:24:06,389 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:24:06,389 - INFO - TWS连接成功!
+2026-02-25 16:24:06,389 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:24:06,389 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:25:02,625 - INFO - sent startApi
+2026-02-25 16:25:02,625 - INFO - REQUEST startApi {}
+2026-02-25 16:25:02,625 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:25:02,625 - INFO - TWS连接已确认
+2026-02-25 16:25:02,625 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:25:02,626 - INFO - TWS连接成功!
+2026-02-25 16:25:02,626 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:25:02,626 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:25:10,830 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:25:10,830 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:25:10,830 - INFO - [信息] 消息中未找到有效的交易信号
+2026-02-25 16:25:12,828 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:25:12,828 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:25:12,828 - INFO - [信息] 消息中未找到有效的交易信号
+2026-02-25 16:25:32,707 - INFO - disconnecting
+2026-02-25 16:25:32,707 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:26:19,184 - INFO - sent startApi
+2026-02-25 16:26:19,184 - INFO - REQUEST startApi {}
+2026-02-25 16:26:19,184 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:26:19,184 - INFO - TWS连接已确认
+2026-02-25 16:26:19,184 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:26:19,184 - INFO - TWS连接成功!
+2026-02-25 16:26:19,184 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:26:19,184 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:27:19,896 - INFO - sent startApi
+2026-02-25 16:27:19,898 - INFO - REQUEST startApi {}
+2026-02-25 16:27:19,898 - INFO - SENDING startApi b'\x00\x00\x00\t71\x002\x0079\x00\x00'
+2026-02-25 16:27:19,898 - INFO - TWS连接已确认
+2026-02-25 16:27:19,898 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:27:19,898 - INFO - TWS连接成功!
+2026-02-25 16:27:19,898 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:27:19,898 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:27:28,830 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:27:28,830 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:27:28,830 - INFO - [解析] 检测到交易信号关键词，开始解析...
+2026-02-25 16:27:28,830 - INFO - [解析] Ticker匹配: ELAN
+2026-02-25 16:27:28,831 - INFO - [解析] Type匹配: LONG
+2026-02-25 16:27:28,831 - INFO - [解析] Trigger Price匹配: 26.87
+2026-02-25 16:27:28,831 - INFO - [解析] Current Price匹配: 27.00
+2026-02-25 16:27:28,831 - INFO - [解析] 解析到交易信号: ELAN LONG @ $27.0
+2026-02-25 16:27:28,831 - INFO - [信号] 检测到交易信号! Ticker: ELAN, 类型: SignalType.LONG
+2026-02-25 16:27:28,831 - INFO - [步骤] 开始执行信号...
+2026-02-25 16:27:28,831 - INFO - [查询] 开始查询 ELAN 的价格信息...
+2026-02-25 16:27:28,831 - INFO - REQUEST reqMktData {'reqId': 1, 'contract': 1998530986448: 0,ELAN,STK,,0.0,,,SMART,,USD,,,False,,combo:, 'genericTickList': '', 'snapshot': False, 'regulatorySnapshot': False, 'mktDataOptions': []}
+2026-02-25 16:27:28,831 - WARNING - [错误] TWS错误 504: Not connected
+2026-02-25 16:27:28,831 - INFO - [发送] 已发送 ELAN 价格查询请求
+2026-02-25 16:27:28,831 - INFO - [信号] 信号类型: LONG
+2026-02-25 16:27:28,831 - INFO - [价格] 触发价格: $26.87, 当前价格: $27.0
+2026-02-25 16:27:28,832 - INFO - [步骤] 信号执行完成
+2026-02-25 16:31:02,829 - INFO - [消息] 收到消息: grace: bb...
+2026-02-25 16:31:02,829 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:31:02,829 - INFO - [解析] 消息不包含'日内短线触发'关键词
+2026-02-25 16:31:02,829 - INFO - [信息] 消息中未找到有效的交易信号
+2026-02-25 16:31:42,679 - INFO - disconnecting
+2026-02-25 16:31:42,679 - WARNING - [断开] TWS连接已断开
+2026-02-25 16:34:02,399 - INFO - sent startApi
+2026-02-25 16:34:02,399 - INFO - REQUEST startApi {}
+2026-02-25 16:34:02,399 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 16:34:02,399 - INFO - TWS连接已确认
+2026-02-25 16:34:02,399 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:34:02,399 - INFO - TWS连接成功!
+2026-02-25 16:34:02,399 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:34:02,400 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:35:54,571 - INFO - sent startApi
+2026-02-25 16:35:54,572 - INFO - REQUEST startApi {}
+2026-02-25 16:35:54,572 - INFO - SENDING startApi b'\x00\x00\x00\x0871\x002\x001\x00\x00'
+2026-02-25 16:35:54,572 - INFO - TWS连接已确认
+2026-02-25 16:35:54,572 - INFO - 正在连接TWS: 127.0.0.1:7497
+2026-02-25 16:35:54,572 - INFO - TWS连接成功!
+2026-02-25 16:35:54,572 - INFO - REQUEST reqIds {'numIds': -1}
+2026-02-25 16:35:54,573 - INFO - SENDING reqIds b'\x00\x00\x00\x078\x001\x00-1\x00'
+2026-02-25 16:36:06,830 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: ELAN
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:36:06,830 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:36:06,830 - INFO - [解析] 检测到交易信号关键词，开始解析...
+2026-02-25 16:36:06,831 - INFO - [解析] Ticker匹配: ELAN
+2026-02-25 16:36:06,831 - INFO - [解析] Type匹配: LONG
+2026-02-25 16:36:06,831 - INFO - [解析] Trigger Price匹配: 26.87
+2026-02-25 16:36:06,831 - INFO - [解析] Current Price匹配: 27.00
+2026-02-25 16:36:06,831 - INFO - [解析] 解析到交易信号: ELAN LONG @ $27.0
+2026-02-25 16:36:06,831 - INFO - [信号] 检测到交易信号! Ticker: ELAN, 类型: SignalType.LONG
+2026-02-25 16:36:06,831 - INFO - [步骤] 开始执行信号...
+2026-02-25 16:36:06,832 - INFO - [查询] 开始查询 ELAN 的价格信息...
+2026-02-25 16:36:06,832 - INFO - REQUEST reqMktData {'reqId': 1, 'contract': 1751212016704: 0,ELAN,STK,,0.0,,,SMART,,USD,,,False,,combo:, 'genericTickList': '', 'snapshot': False, 'regulatorySnapshot': False, 'mktDataOptions': []}
+2026-02-25 16:36:06,832 - INFO - SENDING reqMktData b'\x00\x00\x00.1\x0011\x001\x000\x00ELAN\x00STK\x00\x000.0\x00\x00\x00SMART\x00\x00USD\x00\x00\x000\x00\x000\x000\x00\x00'
+2026-02-25 16:36:06,832 - INFO - [发送] 已发送 ELAN 价格查询请求
+2026-02-25 16:36:06,832 - INFO - [信号] 信号类型: LONG
+2026-02-25 16:36:06,832 - INFO - [价格] 触发价格: $26.87, 当前价格: $27.0
+2026-02-25 16:36:06,832 - INFO - [等待] 等待市场数据返回...
+2026-02-25 16:36:08,833 - INFO - REQUEST cancelMktData {'reqId': 1}
+2026-02-25 16:36:08,833 - INFO - SENDING cancelMktData b'\x00\x00\x00\x062\x002\x001\x00'
+2026-02-25 16:36:08,833 - INFO - [完成] 价格查询完成
+2026-02-25 16:36:08,833 - INFO - [步骤] 信号执行完成
+2026-02-25 16:36:34,828 - INFO - [消息] 收到消息: Unknown: 日内短线触发
+Ticker: NVDA
+Type:  LONG
+Trigger Price: $26.87
+Current Price: $27.00
+Setup: Trigger: > 26.87 ...
+2026-02-25 16:36:34,828 - INFO - [步骤] 开始解析交易信号...
+2026-02-25 16:36:34,828 - INFO - [解析] 检测到交易信号关键词，开始解析...
+2026-02-25 16:36:34,828 - INFO - [解析] Ticker匹配: NVDA
+2026-02-25 16:36:34,828 - INFO - [解析] Type匹配: LONG
+2026-02-25 16:36:34,828 - INFO - [解析] Trigger Price匹配: 26.87
+2026-02-25 16:36:34,828 - INFO - [解析] Current Price匹配: 27.00
+2026-02-25 16:36:34,828 - INFO - [解析] 解析到交易信号: NVDA LONG @ $27.0
+2026-02-25 16:36:34,830 - INFO - [信号] 检测到交易信号! Ticker: NVDA, 类型: SignalType.LONG
+2026-02-25 16:36:34,830 - INFO - [步骤] 开始执行信号...
+2026-02-25 16:36:34,830 - INFO - [查询] 开始查询 NVDA 的价格信息...
+2026-02-25 16:36:34,830 - INFO - REQUEST reqMktData {'reqId': 1, 'contract': 1751212017808: 0,NVDA,STK,,0.0,,,SMART,,USD,,,False,,combo:, 'genericTickList': '', 'snapshot': False, 'regulatorySnapshot': False, 'mktDataOptions': []}
+2026-02-25 16:36:34,830 - INFO - SENDING reqMktData b'\x00\x00\x00.1\x0011\x001\x000\x00NVDA\x00STK\x00\x000.0\x00\x00\x00SMART\x00\x00USD\x00\x00\x000\x00\x000\x000\x00\x00'
+2026-02-25 16:36:34,830 - INFO - [发送] 已发送 NVDA 价格查询请求
+2026-02-25 16:36:34,830 - INFO - [信号] 信号类型: LONG
+2026-02-25 16:36:34,831 - INFO - [价格] 触发价格: $26.87, 当前价格: $27.0
+2026-02-25 16:36:34,831 - INFO - [等待] 等待市场数据返回...
+2026-02-25 16:36:36,831 - INFO - REQUEST cancelMktData {'reqId': 1}
+2026-02-25 16:36:36,831 - INFO - SENDING cancelMktData b'\x00\x00\x00\x062\x002\x001\x00'
+2026-02-25 16:36:36,831 - INFO - [完成] 价格查询完成
+2026-02-25 16:36:36,831 - INFO - [步骤] 信号执行完成
+2026-02-25 16:37:28,473 - INFO - disconnecting
+2026-02-25 16:37:28,473 - WARNING - [断开] TWS连接已断开

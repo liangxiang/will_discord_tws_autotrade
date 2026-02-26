@@ -1,118 +1,247 @@
-# Discord频道消息监控系统
+# Discord自动交易系统
 
-🎯 **实时抓取Discord频道消息的完整解决方案**
+🎯 **Discord消息驱动的自动交易解决方案**
 
-绕过Discord严格的CSP限制，实现Tampermonkey脚本自动抓取消息并实时传输到Python程序。
+从Discord频道实时抓取交易信号，自动在TWS (Interactive Brokers) 上执行交易，包含完整的风险管理和止损止盈机制。
 
 ## 🚀 系统特点
 
-- ✅ **完全自动化** - 无需手动操作
-- ✅ **实时传输** - 消息即时显示
-- ✅ **绕过CSP限制** - 使用127.0.0.1地址
-- ✅ **稳定可靠** - HTTP POST直接传输
-- ✅ **简单易用** - 仅需3个文件
+- ✅ **完全自动化** - 从信号识别到订单执行
+- ✅ **实时交易** - 毫秒级响应交易信号
+- ✅ **风险管理** - 止损止盈、仓位控制、日亏损限制
+- ✅ **TWS集成** - 直接对接Interactive Brokers
+- ✅ **智能解析** - 自动识别Discord交易信号
+- ✅ **安全可靠** - 紧急平仓、错误处理机制
 
 ## 📁 文件说明
 
+### 核心文件
 1. **`discord-channel-monitor.user.js`** - Tampermonkey用户脚本
-   - 监控Discord频道新消息
-   - 自动POST数据到Python服务器
-   
-2. **`discord_webhook_server.py`** - Python HTTP服务器
-   - 接收Discord消息数据
-   - 格式化显示在终端
+   - 监控Discord频道交易信号
+   - 实时POST数据到交易服务器
 
-3. **`README.md`** - 本说明文档
+2. **`discord_trading_server.py`** - 主交易服务器
+   - 接收Discord消息并解析交易信号
+   - 集成TWS自动交易功能
+   - 提供状态监控和紧急平仓接口
+
+3. **`tws_auto_trader.py`** - TWS自动交易核心
+   - Interactive Brokers API集成
+   - 交易信号解析和执行
+   - 风险管理和止损止盈逻辑
+
+### 配置和工具文件
+4. **`trading_config.json`** - 交易配置文件
+   - 交易参数、风险控制设置
+   - TWS连接配置、信号过滤规则
+
+5. **`install_requirements.py`** - 依赖安装脚本
+   - 自动安装所需Python包
+   - 系统配置检查
+
+6. **`README.md`** - 完整使用文档
 
 ## 🛠️ 安装使用
 
-### 步骤1: 安装Tampermonkey脚本
+### 前置要求
+- Python 3.7+
+- Interactive Brokers TWS 或 IB Gateway
+- Chrome/Edge浏览器 + Tampermonkey扩展
 
-1. 安装Tampermonkey浏览器扩展
-2. 打开Tampermonkey控制面板
-3. 点击"创建新脚本"
-4. 复制粘贴 `discord-channel-monitor.user.js` 的内容
-5. 保存脚本 (Ctrl+S)
-
-### 步骤2: 启动Python服务器
+### 步骤1: 安装依赖
 
 ```bash
-python discord_webhook_server.py
+# 自动安装所有依赖
+python install_requirements.py
+
+# 或手动安装
+pip install ibapi
 ```
 
-服务器启动后会显示：
-```
-Discord Webhook服务器启动!
-监听地址: http://127.0.0.1:8888/webhook
-等待Tampermonkey脚本连接...
+### 步骤2: 配置TWS
+1. 启动TWS (Trader Workstation)
+2. 登录您的账户 (建议先使用模拟账户测试)
+3. 启用API连接: 
+   - 配置 → API → 启用ActiveX和Socket客户端
+   - 端口设置为7497 (实盘) 或 7498 (模拟)
+   - 添加可信IP: 127.0.0.1
+
+### 步骤3: 配置交易参数
+编辑 `trading_config.json`:
+```json
+{
+  "trading_settings": {
+    "default_quantity": 100,        // 默认交易股数
+    "stop_loss_percent": 0.02,      // 止损 2%
+    "take_profit_percent": 0.04,    // 止盈 4%
+    "max_positions": 5,             // 最大持仓数
+    "daily_loss_limit": 1000        // 日亏损限制
+  }
+}
 ```
 
-### 步骤3: 开始监控
+### 步骤4: 安装Tampermonkey脚本
+1. 安装Tampermonkey浏览器扩展
+2. 复制 `discord-channel-monitor.user.js` 内容
+3. 在Tampermonkey中创建新脚本并保存
 
-1. 打开目标Discord频道 (例如: `https://discord.com/channels/xxx/xxx`)
-2. 等待3秒让脚本加载
-3. 点击页面右上角的"Start Monitoring"按钮
-4. 控制台显示连接成功信息
+### 步骤5: 启动交易系统
+```bash
+python discord_trading_server.py
+```
+
+选择启用自动交易功能，系统会自动连接TWS。
+
+### 步骤6: 开始监控
+1. 打开目标Discord频道
+2. 点击"Start Monitoring"
+3. 系统开始监听交易信号
 
 ## 📊 效果展示
 
-**Python终端实时输出：**
+### 交易信号识别
 ```
-127.0.0.1 - - [25/Feb/2026 12:30:56] "POST /webhook HTTP/1.1" 200
-恭喜!成功接收到Discord数据:
+🎯 [交易信号]
 时间: 2026-02-25 12:30:56
-用户: Discord用户名
-内容: 消息内容
-频道: https://discord.com/channels/xxx/xxx
+用户: TradeSignals
+内容: 日内短线触发
+Ticker: VSAT
+Type: LONG  
+Trigger Price: $49.68
+Current Price: $49.78
+🔄 正在分析交易信号...
 --------------------------------------------------------------------------------
 ```
 
-## 🔧 技术原理
+### 自动交易执行
+```
+📡 解析到交易信号: VSAT LONG @ $49.78
+🎯 已下单: BUY 100 VSAT @ Market Price
+✅ 建仓成功: VSAT 100 @ $49.79
+   止损: $48.79, 止盈: $51.75
+📋 已设置止损止盈订单: VSAT
+```
 
-### 核心突破
-Discord的CSP策略阻止大部分外部连接，但允许 `http://127.0.0.1:*`
+### 实时状态监控
+访问 `http://127.0.0.1:8888/status` 查看：
+```json
+{
+  "connected": true,
+  "positions": 1,
+  "daily_pnl": 45.50,
+  "pending_orders": 2,
+  "position_details": {
+    "VSAT": {
+      "quantity": 100,
+      "entry_price": 49.79,
+      "stop_loss": 48.79,
+      "take_profit": 51.75,
+      "entry_time": "2026-02-25T12:30:56"
+    }
+  }
+}
+```
 
-### 工作流程
-1. **Tampermonkey脚本** 监控DOM变化，检测新消息
-2. **自动抓取** 消息ID、时间戳、用户名、内容
-3. **HTTP POST** 发送JSON数据到 `http://127.0.0.1:8888/webhook`
-4. **Python服务器** 接收数据并格式化显示
+## 🔧 技术架构
 
-### CSP绕过策略
-- ❌ `localhost` 被阻止
-- ✅ `127.0.0.1` 被允许
-- ❌ WebSocket连接被阻止  
-- ✅ HTTP POST请求成功
+### 系统流程
+1. **Discord监控** - Tampermonkey脚本实时监控频道消息
+2. **信号解析** - 自动识别包含"日内短线触发"的交易信号
+3. **TWS集成** - 通过IB API连接TWS执行交易
+4. **风险管理** - 自动设置止损止盈，控制仓位和风险
+5. **状态监控** - 实时跟踪持仓、订单和盈亏
 
-## 🛡️ 安全说明
+### 交易信号格式
+系统自动解析以下格式的Discord消息：
+```
+日内短线触发
+Ticker: AAPL
+Type: LONG
+Trigger Price: $150.50
+Current Price: $150.75
+```
 
-- 本工具仅用于监控**有权限访问**的Discord频道
-- 请遵守Discord服务条款和相关法律法规
-- 数据仅在本地处理，不上传到任何外部服务器
+### 风险管理机制
+- **止损止盈**: 自动设置2%止损，4%止盈
+- **仓位控制**: 限制最大持仓数量和单笔交易金额
+- **日损失限制**: 达到日损失上限自动停止交易
+- **紧急平仓**: 可通过API立即平仓所有持仓
+
+### TWS连接安全
+- 仅连接本地127.0.0.1地址
+- 支持模拟账户测试
+- 完整的错误处理和重连机制
+
+## 🛡️ 风险提示
+
+⚠️ **重要声明**
+- **仅供学习研究使用** - 本工具仅用于技术研究和学习
+- **交易有风险** - 股票交易存在亏损风险，请谨慎使用
+- **模拟账户测试** - 强烈建议先在模拟账户中充分测试
+- **遵守法规** - 请遵守当地金融监管法规和交易所规则
+- **个人责任** - 使用本工具产生的盈亏由使用者自行承担
+
+## 🚨 安全措施
+
+- **本地运行** - 所有数据处理均在本地，无外部传输
+- **API安全** - TWS连接仅限本地127.0.0.1地址
+- **权限控制** - 仅监控有权限访问的Discord频道
+- **紧急停止** - 提供紧急平仓和停止交易功能
 
 ## 🐛 故障排除
 
-**问题1: 脚本无法连接服务器**
-- 确保Python服务器已启动
-- 检查防火墙是否阻止8888端口
-- 确认使用127.0.0.1而不是localhost
+### 常见问题
 
-**问题2: 无法检测到新消息**
-- 刷新Discord页面重新加载脚本
-- 检查浏览器控制台是否有错误信息
-- 确认频道有新消息产生
+**问题1: TWS连接失败**
+- 确保TWS已启动并登录
+- 检查API设置: 配置→API→启用Socket客户端
+- 确认端口: 7497(实盘) 或 7498(模拟)
+- 检查防火墙设置
 
-**问题3: 消息格式异常**
-- 检查Discord页面DOM结构是否变化
-- 查看控制台调试信息定位问题
+**问题2: 交易信号无法识别**
+- 检查消息格式是否包含"日内短线触发"
+- 确认包含完整的Ticker、Type、Price信息
+- 查看服务器日志获取详细错误信息
 
-## 📝 更新日志
+**问题3: 订单执行失败**
+- 检查账户资金是否充足
+- 确认股票代码正确且可交易
+- 检查交易时间和市场状态
 
-- **v1.0** - 初始版本，基本消息监控功能
-- **v2.0** - 修复CSP限制，使用127.0.0.1地址
-- **v3.0** - 优化消息解析，提高稳定性
+### 日志和监控
+
+**查看实时状态:**
+```bash
+curl http://127.0.0.1:8888/status
+```
+
+**紧急平仓:**
+```bash
+curl -X POST http://127.0.0.1:8888/emergency_close
+```
+
+**查看日志文件:**
+- `trading.log` - 详细交易日志
+- 服务器终端输出 - 实时状态信息
+
+## 🔄 系统扩展
+
+### 支持的扩展功能
+- ✅ 多种信号格式解析
+- ✅ 自定义风险参数
+- ✅ 多账户支持
+- ✅ 实时通知推送
+- ✅ 交易历史记录
+- ✅ 性能统计分析
+
+### 未来计划
+- 📋 机器学习信号过滤
+- 📋 多经纪商支持
+- 📋 Web管理界面
+- 📋 移动端监控App
 
 ---
 
-**开发完成时间:** 2026年2月  
-**状态:** ✅ 已测试通过，正常工作
+**开发时间:** 2026年2月  
+**版本:** v3.0 - Discord自动交易系统  
+**状态:** ✅ 已测试，生产就绪

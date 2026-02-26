@@ -1,0 +1,34 @@
+{
+  "trading_settings": {
+    "default_quantity": 100,
+    "stop_loss_percent": 0.02,
+    "take_profit_percent": 0.04,
+    "max_positions": 5,
+    "daily_loss_limit": 1000,
+    "position_size_percent": 0.1,
+    "enable_trading": true,
+    "risk_management": {
+      "max_portfolio_risk": 0.02,
+      "max_single_position_risk": 0.005,
+      "max_daily_trades": 10
+    }
+  },
+  "tws_connection": {
+    "host": "127.0.0.1",
+    "port": 7497,
+    "client_id": 34
+  },
+  "signal_filters": {
+    "required_keywords": ["日内短线触发"],
+    "allowed_tickers": [],
+    "blocked_tickers": [],
+    "min_price": 5.0,
+    "max_price": 1000.0,
+    "trading_hours_only": true
+  },
+  "notifications": {
+    "enable_entry_alerts": true,
+    "enable_exit_alerts": true,
+    "enable_error_alerts": true
+  }
+}
