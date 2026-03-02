@@ -29,7 +29,10 @@
       "Bash(python test_price_query.py)",
       "Bash(python alternative_price_query.py)",
       "Bash(python standalone_price_query.py NVDA)",
-      "Bash(python standalone_order.py NVDA BUY 1)"
+      "Bash(python standalone_order.py NVDA BUY 1)",
+      "Bash(python position_manager.py)",
+      "Bash(curl -X POST http://127.0.0.1:8888/webhook -H \"Content-Type: application/json\" -d \"{\"\"author\"\":\"\"grace\"\",\"\"content\"\":\"\"日内短线触发\\nTicker: TSLA\\nType: LONG\\nTrigger Price: $245.50\\nCurrent Price: $246.00\"\"}\")",
+      "Bash(curl -X GET http://127.0.0.1:8888/status)"
     ],
     "deny": [],
     "ask": []

@@ -10,6 +10,7 @@ from enum import Enum
 import logging
 import threading
 import subprocess
+from position_manager import PositionManager
 
 try:
     from ib_insync import *
@@ -37,6 +38,9 @@ class FinalSimpleTWSTrader:
         self.connected = False
         self.lock = threading.Lock()  # 防止并发调用
         
+        # 初始化仓位管理器
+        self.position_manager = PositionManager()
+        
         # 加载交易配置
         try:
             with open('trading_config.json', 'r', encoding='utf-8') as f:
@@ -45,7 +49,7 @@ class FinalSimpleTWSTrader:
         except FileNotFoundError:
             # 默认配置
             self.trading_config = {
-                "default_quantity": 100,
+                "position_size_usd": 10000,
                 "enable_trading": True
             }
         
@@ -178,9 +182,16 @@ class FinalSimpleTWSTrader:
                 self.logger.info("[交易] 交易功能已禁用，跳过下单")
                 return
             
+            # 检查是否已有该股票的仓位
+            if signal.ticker in self.position_manager.positions:
+                self.logger.info(f"[交易] {signal.ticker} 已有仓位，跳过下单")
+                return
+            
             # 确定买卖方向
             action = "BUY" if signal.signal_type == SignalType.LONG else "SELL"
-            quantity = self.trading_config.get("default_quantity", 100)
+            
+            # 基于当前价格计算仓位大小（$10,000资金）
+            quantity = self.position_manager.calculate_position_size(signal.current_price)
             
             self.logger.info(f"[下单] 准备下单: {action} {quantity} {signal.ticker}")
             
@@ -202,10 +213,18 @@ class FinalSimpleTWSTrader:
                             ticker_name = parts[1]
                             action_name = parts[2] 
                             quantity_name = parts[3]
-                            order_id = parts[4]
+                            order_id = int(parts[4])
                             
                             self.logger.info(f"[成功] 订单已提交: {action_name} {quantity_name} {ticker_name}")
                             self.logger.info(f"[订单] 订单ID: {order_id}")
+                            
+                            # 添加到仓位管理器
+                            self.position_manager.add_position(
+                                ticker=ticker_name,
+                                action=action_name,
+                                entry_price=signal.current_price,  # 使用信号中的当前价格作为入场价
+                                order_id=order_id
+                            )
                     
                     elif line.startswith("ORDER_STATUS:"):
                         status = line.split(":", 1)[1] if ":" in line else line
@@ -254,10 +273,18 @@ class FinalSimpleTWSTrader:
     
     def get_status(self) -> dict:
         """获取交易状态"""
+        position_status = self.position_manager.get_status()
+        
         return {
             "connected": self.connected,
-            "positions": 0,
-            "daily_pnl": 0.0,
-            "pending_orders": 0,
-            "position_details": {}
+            "positions": position_status["active_positions"],
+            "daily_pnl": 0.0,  # TODO: 计算实际盈亏
+            "pending_orders": 0,  # TODO: 跟踪挂单
+            "position_details": position_status["positions"],
+            "monitoring": position_status["monitoring"]
         }
+    
+    def emergency_close_all(self):
+        """紧急平仓所有仓位"""
+        self.logger.warning("[紧急] 执行紧急平仓!")
+        self.position_manager.close_all_positions()
