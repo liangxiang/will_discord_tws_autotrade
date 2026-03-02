@@ -1,13 +1,16 @@
 {
   "trading_settings": {
     "position_size_usd": 10000,
-    "stop_loss_percent": 0.02,
-    "take_profit_percent": 0.04,
     "max_positions": 10,
     "daily_loss_limit": 5000,
     "enable_trading": true,
-    "enable_stop_loss": true,
-    "enable_take_profit": true,
+    "atr_settings": {
+      "atr_period": 14,
+      "stop_loss_factor": 1.0,
+      "target1_factor": 1.0,
+      "target2_factor": 1.0,
+      "trailing_stop_factor": 1.0
+    },
     "risk_management": {
       "max_portfolio_risk": 0.05,
       "max_single_position_risk": 0.02,

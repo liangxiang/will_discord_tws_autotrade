@@ -1,0 +1,38 @@
+Take Profit Steps
+Target 1 Hit:
+    
+Sell first 1/3 of shares
+Move stop loss up to entry price
+Keep monitoring remaining 2/3
+Target 2 Hit:
+    
+Sell second 1/3 of shares
+Activate trailing stop on final 1/3
+∙    Trailing stop distance = ATR × factor
+∙    Trailing stop price = current price - (ATR × factor)
+Keep monitoring remaining 1/3
+Trailing Stop Hit:
+    
+Sell final 1/3
+Trade complete
+
+Stop Loss Steps
+At Entry (before any target):
+    ∙    Stop loss price = entry price - (ATR × 1.5)
+Before Target 1:
+    
+Price drops to stop loss price
+Sell ALL shares immediately
+Trade complete, take the loss
+After Target 1 (breakeven stop hit):
+    
+Stop loss is now at entry price
+Price drops back to entry price
+Sell remaining 2/3 at breakeven
+Trade complete, small profit from first 1/3 only
+After Target 2 (trailing stop hit):
+    
+Trailing stop = highest price reached - (ATR × factor)
+Price drops to trailing stop price
+Sell remaining 1/3
+Trade complete, profit locked from all three exits
